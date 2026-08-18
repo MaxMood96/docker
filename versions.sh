@@ -40,7 +40,7 @@ _curl() {
 
 dindLatest="$(
 	_curl -H 'Accept: application/json' 'https://github.com/docker/docker/commits/master/hack/dind.atom' \
-		| jq -r '.payload | first(.commitGroups[].commits[].oid)'
+		| jq -r '.payload | first(.. | .commits?[]?.oid)'
 )"
 
 dockerVersions="$(

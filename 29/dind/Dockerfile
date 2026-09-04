@@ -10,7 +10,6 @@ FROM docker:29-cli
 # https://github.com/docker/docker-ce-packaging/blob/963aa02666035d4e268f33c63d7868d6cdd1d34c/deb/common/control#L28-L41
 RUN set -eux; \
 	apk add --no-cache \
-		btrfs-progs \
 		e2fsprogs \
 		e2fsprogs-extra \
 		git \
